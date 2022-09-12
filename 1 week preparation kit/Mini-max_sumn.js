@@ -11,8 +11,6 @@ var nElementSum = function (arr, n) {
 		leftMinSum(minToMax, n)
 	);
 
-	// console.log('nMaxSum =', nMaxSum);
-	// console.log('nMinSum = ', nMinSum);
 };
 nElementSum([1, 32, 3, 4, 2], 3);
 
