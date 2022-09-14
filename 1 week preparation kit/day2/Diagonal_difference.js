@@ -26,17 +26,17 @@
 // Each of the next n lines describes a row, arr[i] , and consists of n space-separated integers arr[i][j].
 
 function diagonalDifference(arr) {
-	// Write your code here
-	let n = arr[0].length;
-	let primaryDiaSum = 0;
-	let secondaryDiaSum = 0;
-	// let result = 0;
-	for (let i = 0, j = n - 1; i < n, j >= 0; i++, j--) {
-		primaryDiaSum += arr[i][i];
-		secondaryDiaSum += arr[i][j];
-	}
-	let result = primaryDiaSum - secondaryDiaSum;
+  // Write your code here
+  let n = arr[0].length;
+  let primaryDiaSum = 0;
+  let secondaryDiaSum = 0;
+  // let result = 0;
+  for (let i = 0, j = n - 1; i < n, j >= 0; i++, j--) {
+    primaryDiaSum += arr[i][i];
+    secondaryDiaSum += arr[i][j];
+  }
+  let result = primaryDiaSum - secondaryDiaSum;
 
-	return Math.abs(result);
+  return Math.abs(result);
 }
 diagonalDifference([1, 2, 3], [4, 5, 6], [7, 8, 9]);
