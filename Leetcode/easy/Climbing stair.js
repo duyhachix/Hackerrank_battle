@@ -27,16 +27,4 @@
  */
 var climbStairs = function (n) {
 	if (n <= 2) return n;
-
-	let withOneStep = 1;
-	let withTwoSteps = 2;
-	let sum = withOneStep + withTwoSteps;
-
-	for (let i = 3; i < n; i++) {
-		withOneStep = withTwoSteps;
-		withTwoSteps = sum;
-		sum = withOneStep + withTwoSteps;
-	}
-
-	return sum;
 };

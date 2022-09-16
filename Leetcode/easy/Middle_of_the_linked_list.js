@@ -10,15 +10,17 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-class Node {
-	constructor(val) {
-		this.data = val;
-		this.next = null;
-	}
-}
-
 var middleNode = function (head) {
 	let node = head;
-	console.log(node.next);
+	let nodeArr = [];
+	while (node != null) {
+		nodeArr.push(node);
+		node = node.next;
+	}
+	let nodeArrLength = nodeArr.length;
+	node = head;
+	return nodeArrLength % 2 == 1
+		? nodeArr[Math.floor(nodeArrLength / 2)]
+		: nodeArr[nodeArrLength / 2];
 };
-middleNode([1, 2, 3, 4, 5, 6]);
+// ok
