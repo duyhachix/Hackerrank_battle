@@ -23,5 +23,3 @@ var searchInsert = function (nums, target) {
   }
 };
 searchInsert([1, 2, 3, 5, 9], 12);
-// // Runtime: 117 ms, faster than 8.19% of JavaScript online submissions for Search Insert Position.
-// Memory Usage: 42.3 MB, less than 49.00% of JavaScript online submissions for Search Insert Position.

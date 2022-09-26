@@ -34,17 +34,17 @@
  * @returns new array with element is the index of the element that sum of 2 eleemtn = target
  */
 var twoSum = function (nums, target) {
-	let n = nums.length;
-	let targetArr = [];
-	for (let i = 0; i < n - 1; i++) {
-		for (j = i + 1; j < n; j++) {
-			let sum = nums[i] + nums[j];
-			if (sum == target) {
-				targetArr.push(i);
-				targetArr.push(j);
-				return targetArr;
-			}
-		}
-	}
+  let n = nums.length;
+  let targetArr = [];
+  for (let i = 0; i < n - 1; i++) {
+    for (j = i + 1; j < n; j++) {
+      let sum = nums[i] + nums[j];
+      if (sum == target) {
+        targetArr.push(i);
+        targetArr.push(j);
+        return targetArr;
+      }
+    }
+  }
 };
 // done
