@@ -12,20 +12,21 @@
  */
 var mergeTwoLists = function (list1, list2) {
   if (!list1 || !list2) return list1 || list2; // check for special cases
-
+  let currNode1 = list1
+  let currNode2 = list2
   let newList = new ListNode();
   let last = newList;
-  while (list1 && list2) {
-    if (list1.val > list2.val) {
-      last.next = list2;
-      list2 = list2.next;
+  while (currNode1 && currNode2) {
+    if (currNode1.val > currNode2.val) {
+      last.next = currNode2;
+      currNode2 = currNode2.next;
     } else {
-      last.next = list1;
-      list1 = list1.next;
+      last.next = currNode1;
+      currNode1 = currNode1.next;
     }
     last = last.next;
   }
-  last.next = list1 || list2;
+  last.next = currNode1 || currNode2;
 
   return newList.next;
 };

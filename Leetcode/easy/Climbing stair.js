@@ -1,5 +1,5 @@
+//leetcode.com/problems/climbing-stairs/
 // You are climbing a staircase. It takes n steps to reach the top.
-
 // Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 
 // Example 1:
@@ -25,18 +25,18 @@
  * @param {number} n
  * @return {number}
  */
-var climbStairs = function (n) {
-  if (n <= 2) return n;
+https: var climbStairs = function (n) {
+	if (n <= 2) return n;
 
-  let withOneStep = 1;
-  let withTwoSteps = 2;
-  let sum = withOneStep + withTwoSteps;
+	let withOneStep = 1;
+	let withTwoSteps = 2;
+	let sum = withOneStep + withTwoSteps;
 
-  for (let i = 3; i < n; i++) {
-    withOneStep = withTwoSteps;
-    withTwoSteps = sum;
-    sum = withOneStep + withTwoSteps;
-  }
+	for (let i = 3; i < n; i++) {
+		withOneStep = withTwoSteps;
+		withTwoSteps = sum;
+		sum = withOneStep + withTwoSteps;
+	}
 
-  return sum;
+	return sum;
 };
